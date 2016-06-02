@@ -1,9 +1,152 @@
-<h1> Hello world </h1>
-<ul>
-  <li>
-    <a href='demo/css3/cube.html'>Cube animation</a>
-  </li>
-  <li>
-    <a href='demo/css3/hut.html'>Hut animation</a>
-  </li>
-</ul>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Creativity has no limits</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  
+    .container {
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .banner {
+      width: 100%;
+      height: 364px;
+      background: url('img/banner.jpg');
+      background-size: cover;
+    }
+    
+    .header {
+      width: 100%;
+      height: 30px;
+      padding: 30px 0;
+      margin-bottom: 100px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+      font-weight: 300;
+      font-size: 58px;
+    }
+    
+    .header a {
+      color: #333;
+      text-decoration: none;
+      outline: none;
+      -webkit-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+    
+    .selected {
+      border-bottom: 2px solid #888;
+    }
+    
+    
+    .tagline {
+      margin-top: 15px;
+      font-family: "HelveticaNeue-UltraLight","Helvetica Neue UltraLight","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+      font-weight: 300;
+      font-size: 32px;
+    }
+    
+    #main-nav {
+      margin-bottom: 0px;
+      float: center;
+      margin-top: 15px;
+    }
+    
+    #main-nav>ul>li {
+      margin-left: 50px;
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      zoom: 1;
+    }
+    
+    #main-nav>ul li {
+      position: relative;
+    }  
+    
+    #main-nav>ul>li:first-of-type {
+      margin-left: 0;
+    } 
+    
+    .content_view {
+      width: 100%;
+      min-height: 500px;
+      display: none;
+    } 
+    
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: 1px solid #aaa;
+    }
+  </style>
+  
+  <body>
+    <div class='container'>
+      <header id="header" class="header"><h1><a href="/">My Octopress Blog</a></h1>
+        <span class="tagline">A blogging framework for hackers.</span>
+        <nav id="main-nav">
+          <ul>
+            <li><a id='about'>About</a></li>
+            <li><a id='tech'>Tech Gallery</a></li>
+            <li><a id='art'>Art Gallery</a></li>
+            <li><a id='quotes'>Quotes</a></li>
+            <li><a id='contact'>Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id='about_view' class='content_view'>
+        About
+      </div>
+      <div id='tech_view' class='content_view'>
+        <select>
+          <option value='demo/css3/cube.html'> Cube Animation </option>
+          <option value='demo/css3/screensaver.html'> screensaver Animation </option>
+          <option value='demo/css3/hut.html'> Hut Animation </option>
+        </select>
+        <iframe src='demo/css3/cube.html'></iframe>
+      </div>
+      <div id='art_view' class='content_view'>
+        Art
+      </div>
+      <div id='quotes_view' class='content_view'>
+        quotes
+      </div>
+      <div id='contact_view' class='content_view'>
+        contact
+      </div>
+    </div>
+  </body>
+  <script src='js/jquery-2.1.3.min.js' type='text/javascript'></script>
+  
+  <script>
+    $(document).ready(function () {
+      $('#main-nav a').click(function(e) {
+        e.preventDefault();
+        $('#main-nav a').removeClass('selected');
+        $(this).addClass('selected');
+        $('.content_view').fadeOut();
+        $('#' + $(this).attr('id') + '_view').fadeIn();
+      });
+      
+      $('#tech_view select').change(function() {
+        console.log($(this).val());
+        $('#tech_view iframe').attr('src', $(this).val());
+      })
+    });
+  </script>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style type="text/css"> 
+.wall
+{
+	width:1200px;
+	height:600px;
+	margin-left:0px;
+	top:0px;
+	
+}
+
+div
+{
+width:100px;
+height:100px;
+position:absolute;
+top:0px;
+font-size:1px;
+text-shadow: 5px 5px 5px #aaa;
+font-weight:bold;
+visibility:hidden;	
+}
+.ball1
+{
+
+color:#4C787E;
+-webkit-animation-name:animate1;
+-webkit-animation-duration:14s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:0s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+z-index:1;
+}
+
+.ball2
+{
+
+color:#4E387E;
+-webkit-animation-name:animate2;
+-webkit-animation-duration:14s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:.5s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+z-index:2;
+}
+
+
+.ball3
+{
+color:#7D053F;
+-webkit-animation-name:animate3;
+-webkit-animation-duration:14s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:1s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+z-index:3;
+}
+
+
+.ball4
+{
+color:#307D7E;
+-webkit-animation-name:animate4;
+-webkit-animation-duration:14s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:1.5s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+z-index:4;
+}
+
+
+.ball5
+{
+color:#306754;
+-webkit-animation-name:animate5;
+-webkit-animation-duration:14s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:2s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+z-index:5;
+}
+
+
+.ball6
+{
+color:#ADA96E;
+-webkit-animation-name:animate6;
+-webkit-animation-duration:14s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:2.5s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+z-index:6;
+}
+
+.ball7
+{
+color:#806517;
+-webkit-animation-name:animate7;
+-webkit-animation-duration:14s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:3s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+z-index:6;
+}
+
+@-webkit-keyframes animate1 /* Safari and Chrome */
+{
+0%   {left:0px; top:0px;visibility:visible;-webkit-transform:rotateZ(0deg);}
+20%  {left:500px; top:560px;font-size:100px;-webkit-transform:rotateZ(-360deg);}
+40%  {left:1110px; top:60px;font-size:100px;-webkit-transform:rotateZ(0deg);}
+60%  {left:50px; top:260px;font-size:100px;-webkit-transform:rotateZ(0deg);}
+90% {left:50px; top:260px;font-size:100px;}
+100% {left:560px; top:560px;font-size:100px;}
+}
+
+
+@-webkit-keyframes animate2 /* Safari and Chrome */
+{
+0%   {left:810px; top:0px;visibility:visible;-webkit-transform:rotateY(0deg);}
+20%  {left:560px; top:560px;font-size:100px;-webkit-transform:rotateY(-360deg);}
+40%  {left:1110px; top:60px;font-size:100px;-webkit-transform:rotateY(0deg);}
+60%  {left:140px; top:260px;font-size:100px;}
+90% {left:140px; top:260px;font-size:100px;}
+100% {left:560px; top:560px;font-size:100px;}
+}
+
+@-webkit-keyframes animate3 /* Safari and Chrome */
+{
+0%   {left:560px; top:0px;visibility:visible;-webkit-transform:rotateX(0deg);}
+20%  {left:560px; top:560px;font-size:100px;-webkit-transform:rotateX(-360deg);}
+40%  {left:1110px; top:60px;font-size:100px;-webkit-transform:rotateX(0deg);}
+60%  {left:240px; top:260px;font-size:100px;}
+90% {left:240px; top:260px;font-size:100px;}
+100% {left:560px; top:560px;font-size:100px;}
+}
+
+@-webkit-keyframes animate4 /* Safari and Chrome */
+{
+0%   {left:1100px; top:260px;visibility:visible;-webkit-transform:rotateZ(0deg);}
+20%  {left:560px; top:560px;font-size:100px;-webkit-transform:rotateZ(-360deg);}
+40%  {left:1110px; top:0px;font-size:100px;-webkit-transform:rotateZ(0deg);}
+60%  {left:340px; top:260px;font-size:100px;}
+90% {left:340px; top:260px;font-size:100px;}
+100% {left:560px; top:560px;font-size:100px;}
+}
+
+
+@-webkit-keyframes animate5 /* Safari and Chrome */
+{
+0%   {left:0px; top:260px;visibility:visible;-webkit-transform:rotateX(0deg);}
+20%  {left:560px; top:560px;font-size:100px;-webkit-transform:rotateX(-360deg);}
+40%  {left:1110px; top:0px;font-size:100px;-webkit-transform:rotateX(0deg);}
+60%  {left:440px; top:260px;font-size:100px;}
+90% {left:440px; top:260px;font-size:100px;}
+100% {left:560px; top:560px;font-size:100px;}
+}
+
+@-webkit-keyframes animate6 /* Safari and Chrome */
+{
+0%   {left:1110px; top:260px;visibility:visible;-webkit-transform:rotateZ(0deg);}
+20%  {left:560px; top:560px;font-size:100px;-webkit-transform:rotateZ(-360deg);}
+40%  {left:1110px; top:0px;font-size:100px;-webkit-transform:rotateZ(0deg);}
+60%  {left:540px; top:260px;font-size:100px;}
+90% {left:540px; top:260px;font-size:100px;}
+100% {left:560px; top:560px;font-size:100px;}
+}
+
+@-webkit-keyframes animate7 /* Safari and Chrome */
+{
+0%   {left:1110px; top:560px;visibility:visible;-webkit-transform:rotateY(0deg);}
+20%  {left:560px; top:560px;font-size:100px;-webkit-transform:rotateY(-360deg);}
+40%  {left:1110px; top:0px;font-size:100px;-webkit-transform:rotateY(0deg);}
+60%  {left:640px; top:260px;font-size:100px;}
+90% {left:640px; top:260px;font-size:100px;}
+100% {left:560px; top:560px;font-size:100px;}
+}
+
+</style>
+<script type="text/javascript">
+	  
+	  //method to disable right click
+	  var message="Sorry, right-click has been disabled"; 
+		function clickIE() {if (document.all) {(message);return false;}} 
+		function clickNS(e) {
+			if(document.layers||(document.getElementById&&!document.all)) { 
+					if (e.which==2||e.which==3) {(message);return false;}}} 
+					if (document.layers) 
+						{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+					else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+					document.oncontextmenu=new Function("return false");
+    </script>
+
+
+</head>
+<body>
+<div class="wall">
+	<div class="ball1">S</div>
+	<div class="ball2">A</div>
+	<div class="ball3">U</div>
+	<div class="ball4">R</div>
+	<div class="ball5">A</div>
+	<div class="ball6">B</div>
+	<div class="ball7">H</div>
+<div>
+</body>
+</html>
